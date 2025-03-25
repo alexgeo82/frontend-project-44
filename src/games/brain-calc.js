@@ -2,20 +2,21 @@
 import index from '../index.js';
 
 const rules = 'What is the result of the expression?';
-export default () => {
-  // eslint-disable-next-line consistent-return
-  const calculator = (num1, num2, operator) => {
-    // eslint-disable-next-line default-case
-    switch (operator) {
-      case '+':
-        return num1 + num2;
-      case '-':
-        return num1 - num2;
-      case '*':
-        return num1 * num2;
-    }
-  };
 
+// eslint-disable-next-line consistent-return
+const calculator = (num1, num2, operator) => {
+  // eslint-disable-next-line default-case
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+  }
+};
+
+export default () => {
   const prepareData = () => {
     const num1 = Math.floor(Math.random() * 100);
     const num2 = Math.floor(Math.random() * 100);

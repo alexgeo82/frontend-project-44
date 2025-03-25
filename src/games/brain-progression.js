@@ -2,17 +2,18 @@
 import index from '../index.js';
 
 const rules = 'What number is missing in the progression?';
-export default () => {
-  const generateProgression = (length, step, firstNum) => {
-    const progression = [firstNum];
-    let temp = firstNum;
-    for (let i = 0; i < length - 1; i += 1) {
-      temp += step;
-      progression.push(temp);
-    }
-    return progression;
-  };
 
+const generateProgression = (length, step, firstNum) => {
+  const progression = [firstNum];
+  let temp = firstNum;
+  for (let i = 0; i < length - 1; i += 1) {
+    temp += step;
+    progression.push(temp);
+  }
+  return progression;
+};
+
+export default () => {
   const prepareData = () => {
     const length = 10;
     const step = Math.floor(Math.random() * 5) + 1;
